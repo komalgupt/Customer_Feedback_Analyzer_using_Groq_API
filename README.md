@@ -1,69 +1,105 @@
-## Customer Feedback Analyzer Using Groq API and FastAPI
-1. Assignment Overview
-This project is a Customer Feedback Analyzer built with FastAPI backend that leverages the Groq API for advanced AI-powered feedback analysis. It processes customer feedback inputs (manual or file upload) and returns structured JSON output containing themes, highlights, sentiment, and the original feedback text. The frontend is built with HTML and CSS templates served through FastAPI. Results can be viewed on the web interface and downloaded as Excel files, stored in a runtime-generated downloads folder.
-2. Folder & File Structure
-# /Customer_feedback_analyzer_agent_1908
-**│
-├── main.py                  # FastAPI app entry point; defines routes and API endpoints
-├── groq_agent.py            # Logic to interact with Groq API and perform feedback 
-├── utils.py                 # Helper functions for data processing, file handling, and ex
-├── requirements.txt         # Python package dependencies
-├── .env                     # Groq API key 
-├── templates/
-│   └── index.html           # Frontend template with feedback form and results 
-├── static/
-│   └── style.css            # Stylesheet for frontend design
+Customer Feedback Analyzer Using Groq API and FastAPI
+📌 Overview
+The Customer Feedback Analyzer is a web application built with FastAPI that uses the Groq API for advanced AI-powered feedback analysis.
+It processes customer feedback from manual input or file upload and returns a structured JSON containing:
+
+Sentiment (Positive, Neutral, Negative)
+
+Themes (Key topics discussed in feedback)
+
+Highlights (Important points mentioned)
+
+Original feedback text
+
+The results can be viewed in the web interface and downloaded as an Excel file, stored in a runtime-generated downloads folder.
+
+📂 Folder Structure
+graphql
+Copy
+Edit
+/Customer_feedback_analyzer_agent_1908
 │
-└── downloads/               # Created at runtime to save downloadable analysis results**
-3. Key Functional Components
-main.py
-Implements FastAPI app. Handles HTTP GET for homepage and POST for analyzing feedback data. Uses groq_agent.py to query Groq API. Saves analysis results in downloadable Excel files inside the /downloads folder.
-groq_agent.py
-Contains functions that format and send feedback text to Groq API, parse returned JSON for sentiment, themes, and highlights.
-utils.py
-Utility functions to convert API results into Excel, manage file writing, and clean temporary files if needed.
-.env file
-Stores sensitive API keys securely. Loaded by the app at runtime but excluded from version control.
-templates/index.html & static/style.css
-Provide user interface for feedback input, file upload, displaying JSON output, and download links.
-downloads folder
-Dynamically created to save output files that users can download post analysis.
-4. Workflow Overview
-User accesses the web app home page served by FastAPI.
-Inputs multiple feedbacks manually or uploads a file containing feedback.
-On form submission, main.py processes input and calls groq_agent.py functions to send data to Groq API.
-Groq API returns analyzed JSON with sentiment, themes, highlights.
-utils.py processes this data into an Excel file saved inside /downloads.
-The frontend displays the JSON results and provides a button to download the Excel file.
-5. Environment Variables & Security
-Sensitive keys like the Groq API key are stored in a .env file.
-.env is excluded from GitHub and public sharing using .gitignore.
-A .env.example file with placeholder variables should be provided for collaborators to set up their own environment.
-6. Installation & Setup Instructions
-1. Clone or download the repository.
-2. Create a Python virtual environment and activate it
-venv\Scripts\activate      
-3.Install dependencies:
-pip install -r requirements.txt
-4.Create a .env file in the project root:
+├── main.py               # FastAPI app entry point; defines routes and API endpoints
+├── groq_agent.py         # Handles interaction with Groq API and feedback processing
+├── utils.py              # Helper functions for file handling & data processing
+├── requirements.txt      # Python dependencies
+├── .env                  # Stores Groq API key (not in version control)
+│
+├── templates/
+│   └── index.html        # Frontend template with feedback form and results
+│
+├── static/
+│   └── style.css         # Frontend styling
+│
+└── downloads/            # Created at runtime for downloadable Excel results
+⚙️ Workflow
+User opens the web app.
+
+Inputs multiple feedbacks manually (one per line) or uploads a supported file (.txt, .csv, .xlsx, .pdf, .docx).
+
+On submission, main.py processes the input and calls Groq API via groq_agent.py.
+
+Groq API returns structured JSON with sentiment, themes, and highlights.
+
+utils.py converts results into an Excel file inside /downloads.
+
+User can view JSON results on the web page and download Excel output.
+
+🔐 Environment Variables & Security
+Sensitive credentials like Groq API Key are stored in a .env file (excluded from GitHub).
+
+Example .env file:
+
+ini
+Copy
+Edit
 GROQ_API_KEY=your_actual_api_key_here
-5.Run the FastAPI server:
+A .env.example file should be provided for collaborators with placeholder values.
+
+🛠 Installation & Setup
+bash
+Copy
+Edit
+# 1. Clone the repository
+git clone https://github.com/your-username/Customer_feedback_analyzer_agent_1908.git
+cd Customer_feedback_analyzer_agent_1908
+
+# 2. Create virtual environment
+python -m venv venv
+venv\Scripts\activate   # Windows
+# source venv/bin/activate   # Mac/Linux
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Create .env file
+echo GROQ_API_KEY=your_actual_api_key_here > .env
+
+# 5. Run FastAPI server
 uvicorn main:app --reload
-6.Open a browser and go to http://localhost:8000
-7. Usage Instructions
-Enter multiple customer feedbacks manually (one per line) or upload a file in supported formats (.txt, .csv, .xlsx, .pdf, .docx).
-Click the Analyze button to process feedback.
-View the detailed JSON analysis of sentiment, themes, and highlights.
-Download the results in Excel format via the provided link.
-8. Future Enhancements 
-Support for multilingual feedback analysis.
-More interactive and responsive frontend UI.
-9. Conclusion
-This project showcases a lightweight yet powerful feedback analysis tool using FastAPI and Groq’s AI API. It provides companies an easy-to-use interface for extracting meaningful insights from customer feedback, with secure handling of sensitive API credentials and user-friendly result exports.
+Open the browser and go to:
+http://localhost:8000
 
-Note : To get the API key of Groq visit : https://console.groq.com/keys
+🚀 Usage
+Enter multiple customer feedbacks manually (one per line) or upload a supported file.
+
+Click Analyze to process the feedback.
+
+View JSON results (sentiment, themes, highlights).
+
+ Future Enhancements
+🌍 Multilingual feedback analysis
+
+💡 Advanced visualization of feedback insights
+
+🎨 More interactive & responsive frontend UI
 
 
+🔑 Getting Groq API Key
+Visit: Groq API Console
 
+Enter a name for your key (e.g., Groq_API_key).
 
-Enter Name for your key (Whatever you want. Example : Groq_API_key) and then submit your API key has been generated and it is ready to use!
+Copy your generated API key and add it to your .env file.
+Download the Excel file from the provided link.
+
