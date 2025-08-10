@@ -1,4 +1,4 @@
-Customer Feedback Analyzer Using Groq API and FastAPI
+## Customer Feedback Analyzer Using Groq API and FastAPI
 📌 Overview
 The Customer Feedback Analyzer is a web application built with FastAPI that uses the Groq API for advanced AI-powered feedback analysis.
 It processes customer feedback from manual input or file upload and returns a structured JSON containing:
@@ -18,16 +18,23 @@ The results can be viewed in the web interface and downloaded as an Excel file, 
 /Customer_feedback_analyzer_agent_1908
 │
 ├── main.py               # FastAPI app entry point; defines routes and API endpoints
+
 ├── groq_agent.py         # Handles interaction with Groq API and feedback processing
+
 ├── utils.py              # Helper functions for file handling & data processing
+
 ├── requirements.txt      # Python dependencies
+
 ├── .env                  # Stores Groq API key (not in version control)
+
 │
 ├── templates/
 │   └── index.html        # Frontend template with feedback form and results
+
 │
 ├── static/
 │   └── style.css         # Frontend styling
+
 │
 └── downloads/            # Created at runtime for downloadable Excel results
 
