@@ -1,4 +1,4 @@
-## Customer Feedback Analyzer Using Groq API and FastAPI
+# Customer Feedback Analyzer Using Groq API and FastAPI
 📌 Overview
 The Customer Feedback Analyzer is a web application built with FastAPI that uses the Groq API for advanced AI-powered feedback analysis.
 It processes customer feedback from manual input or file upload and returns a structured JSON containing:
@@ -13,7 +13,7 @@ Original feedback text
 
 The results can be viewed in the web interface and downloaded as an Excel file, stored in a runtime-generated downloads folder.
 
-# 📂 Folder Structure
+## 📂 Folder Structure
 
 /Customer_feedback_analyzer_agent_1908
 │
@@ -38,7 +38,7 @@ The results can be viewed in the web interface and downloaded as an Excel file, 
 │
 └── downloads/            # Created at runtime for downloadable Excel results
 
-# ⚙️ Workflow
+## ⚙️ Workflow
 User opens the web app.
 
 Inputs multiple feedbacks manually (one per line) or uploads a supported file (.txt, .csv, .xlsx, .pdf, .docx).
@@ -51,14 +51,14 @@ utils.py converts results into an Excel file inside /downloads.
 
 User can view JSON results on the web page and download Excel output.
 
-# 🔐 Environment Variables & Security
+## 🔐 Environment Variables & Security
 Sensitive credentials like Groq API Key are stored in a .env file (excluded from GitHub).
 
 Example .env file:
 GROQ_API_KEY=your_actual_api_key_here
 A .env.example file should be provided for collaborators with placeholder values.
 
-🛠 Installation & Setup
+## 🛠 Installation & Setup
 
 1. Clone the repository
 git clone https://github.com/your-username/Customer_feedback_analyzer_agent_1908.git
@@ -79,17 +79,16 @@ uvicorn main:app --reload
 Open the browser and go to:
 http://localhost:8000
 
-🚀 Usage
+## 🚀 Usage
 Enter multiple customer feedbacks manually (one per line) or upload a supported file.
 
 Click Analyze to process the feedback.
 
 View JSON results (sentiment, themes, highlights).
 
- Future Enhancements
-🌍 Multilingual feedback analysis
+## Future Enhancements
 
-💡 Advanced visualization of feedback insights
+🌍 Multilingual feedback analysis
 
 🎨 More interactive & responsive frontend UI
 
