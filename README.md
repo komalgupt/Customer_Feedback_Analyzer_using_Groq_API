@@ -13,10 +13,8 @@ Original feedback text
 
 The results can be viewed in the web interface and downloaded as an Excel file, stored in a runtime-generated downloads folder.
 
-📂 Folder Structure
-graphql
-Copy
-Edit
+# 📂 Folder Structure
+
 /Customer_feedback_analyzer_agent_1908
 │
 ├── main.py               # FastAPI app entry point; defines routes and API endpoints
@@ -32,7 +30,8 @@ Edit
 │   └── style.css         # Frontend styling
 │
 └── downloads/            # Created at runtime for downloadable Excel results
-⚙️ Workflow
+
+# ⚙️ Workflow
 User opens the web app.
 
 Inputs multiple feedbacks manually (one per line) or uploads a supported file (.txt, .csv, .xlsx, .pdf, .docx).
@@ -45,37 +44,30 @@ utils.py converts results into an Excel file inside /downloads.
 
 User can view JSON results on the web page and download Excel output.
 
-🔐 Environment Variables & Security
+# 🔐 Environment Variables & Security
 Sensitive credentials like Groq API Key are stored in a .env file (excluded from GitHub).
 
 Example .env file:
-
-ini
-Copy
-Edit
 GROQ_API_KEY=your_actual_api_key_here
 A .env.example file should be provided for collaborators with placeholder values.
 
 🛠 Installation & Setup
-bash
-Copy
-Edit
-# 1. Clone the repository
+
+1. Clone the repository
 git clone https://github.com/your-username/Customer_feedback_analyzer_agent_1908.git
 cd Customer_feedback_analyzer_agent_1908
 
-# 2. Create virtual environment
+2. Create virtual environment
 python -m venv venv
 venv\Scripts\activate   # Windows
-# source venv/bin/activate   # Mac/Linux
 
-# 3. Install dependencies
+3. Install dependencies
 pip install -r requirements.txt
 
-# 4. Create .env file
+4. Create .env file
 echo GROQ_API_KEY=your_actual_api_key_here > .env
 
-# 5. Run FastAPI server
+5. Run FastAPI server
 uvicorn main:app --reload
 Open the browser and go to:
 http://localhost:8000
@@ -94,8 +86,7 @@ View JSON results (sentiment, themes, highlights).
 
 🎨 More interactive & responsive frontend UI
 
-
-🔑 Getting Groq API Key
+## 🔑 Getting Groq API Key
 Visit: Groq API Console
 
 Enter a name for your key (e.g., Groq_API_key).
