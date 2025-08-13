@@ -1,0 +1,14 @@
+# Ignore environment file
+.env
+
+# Ignore downloads folder
+downloads/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore virtual environment folder
+venv/
+
+Add .gitignore to ignore env and downloads folder
