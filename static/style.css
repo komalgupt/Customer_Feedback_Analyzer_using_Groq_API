@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f6f9;
+}
+
+/* Header (Compact Hero) */
+.hero {
+    background: linear-gradient(to right, #0077cc, #00aaff);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    color: #ffdd57;
+}
+
+.hero p {
+    font-size: 16px;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* Details Section */
+.details {
+    padding: 30px 20px;
+    background: white;
+    text-align: center;
+}
+
+.details ol {
+    text-align: left;
+    max-width: 500px;
+    margin: auto;
+    padding-left: 20px;
+}
+
+.disclaimer {
+    margin-top: 20px;
+    font-size: 14px;
+    background: #fff8e1;
+    border-left: 4px solid #ff9800;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Tool Section */
+.tool {
+    padding: 30px 20px;
+}
+
+.container {
+    max-width: 700px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 15px;
+    display: block;
+    color: #555;
+}
+
+textarea {
+    width: 95%;
+    height: 100px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: vertical;
+    font-size: 15px;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.result {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f0f7ff;
+    border: 1px solid #b3d7ff;
+    border-radius: 8px;
+}
+
+.result pre {
+    background-color: #eef5ff;
+    padding: 12px;
+    border-radius: 6px;
+    white-space: pre-wrap;
+    font-size: 14px;
+}
+
+.download-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 16px;
+    background-color: #0077cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.download-button:hover {
+    background-color: #005fa3;
+}
